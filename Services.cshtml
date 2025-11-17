@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Services - Complaints";
+}
+
+<h2 class="text-center mb-4">Add a Complaint</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success text-center">@TempData["Message"]</div>
+}
+
+<form method="post" class="text-center">
+    <textarea name="complaintText" maxlength="300"
+              style="width:90%; height:150px; border:1px solid gray; border-radius:8px; padding:10px;"
+              placeholder="Write your complaint (300 words max)"></textarea>
+
+    <br /><br />
+
+    <button type="submit" class="btn btn-success">Submit Complaint</button>
+</form>

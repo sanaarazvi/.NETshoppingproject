@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Services";
+}
+
+<h2>Customer Service & Support</h2>
+
+<p>If you are facing any issue with your order, please submit your complaint below.</p>
+
+<form method="post">
+    <textarea name="complaintText" maxlength="300"
+              placeholder="Describe your issue (max 300 words)"
+              style="width:100%; height:150px; padding:10px; font-size:16px;"></textarea>
+    <br /><br />
+
+    <button type="submit" style="padding:10px 20px; background:green; color:#fff;
+                                 border:none; border-radius:5px; font-size:16px;">
+        Submit Complaint
+    </button>
+</form>
+
+@if (TempData["Message"] != null)
+{
+    <script>
+        alert("@TempData["Message"]");
+    </script>
+}

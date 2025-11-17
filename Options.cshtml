@@ -1,0 +1,12 @@
+﻿<h2 class="text-center mb-4">Choose Payment Method</h2>
+
+<form method="post" asp-action="Pay" class="text-center">
+    <button name="method" value="PhonePe" class="btn btn-success">PhonePe</button>
+    <button name="method" value="Google Pay" class="btn btn-success">GPay</button>
+    <button name="method" value="Paytm" class="btn btn-success">Paytm</button>
+</form>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger text-center mt-3">@TempData["Error"]</div>
+}

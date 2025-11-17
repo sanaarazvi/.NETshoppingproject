@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Order Successful";
+}
+
+<div style="text-align:center; margin-top:50px;">
+    <h2 style="color: green;">🎉 Order Placed Successfully!</h2>
+    <p style="font-size:18px;">
+        Thank you for your purchase!
+    </p>
+
+    @if (ViewBag.Amount != null)
+    {
+        <p style="font-size:20px; font-weight:bold;">
+            Total Amount Paid: ₹@ViewBag.Amount
+        </p>
+    }
+
+    <a href="/" style="display:inline-block; padding:10px 20px; background:#007bff; color:#fff; text-decoration:none; border-radius:5px; margin-top:20px;">
+        Go to Home
+    </a>
+</div>
